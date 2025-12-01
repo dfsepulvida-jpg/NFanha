@@ -13,7 +13,7 @@ EXPECTED_COLUMNS = [
 
 # Produtos que devem ser reconhecidos como código de peça (incluindo as novas regras)
 PRODUCT_KEYWORDS = [
-    "VR", "DG", "CS", "SC", "DT", "PNS", "BORDA", "BT", "FC", "ZD", "PL", "FG", "PLACAS", "SAC", "EP", "PT", "BORDA CONCRETADA",
+    "VR", "DG", "CS","VE","SC", "DT", "PNS", "BORDA", "BT", "FC", "ZD", "PL", "FG", "PLACAS", "SAC", "EP", "PT", "BORDA CONCRETADA",
     "PNSTR8X35", "LAJE PAINEL", "PAINEL",
     "PRE-MOLDADO FORMA", "PRE LAJE - AÇO", "PRE MOLDADO - AÇO", "AB"
 ]
@@ -230,4 +230,5 @@ if __name__ == "__main__":
     df = process_bytes_files([{"filename": os.path.basename(path), "bytes": b}])
     out_csv = os.path.splitext(os.path.basename(path))[0] + "_extracted.csv"
     df.to_csv(out_csv, index=False, sep=';', encoding='utf-8')
+
     print("Extração concluída. CSV salvo em", out_csv)
