@@ -1,4 +1,4 @@
-﻿import re
+import re
 import io
 import pandas as pd
 import pdfplumber
